@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: sample-persistent-volume
+  name: data-pv-claim
+spec:
+  storageClassName: hostpath
+  volumeName: data-pv-volume
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+
+
